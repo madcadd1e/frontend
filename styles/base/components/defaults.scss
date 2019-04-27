@@ -1,0 +1,39 @@
+
+// --- font sizes --- //
+$font-size: 14px;
+
+@mixin primary-font{
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin primary-font-bold{
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    
+}
+
+// --- colors --- //
+
+$lightgray: #eaeaea;
+$lightblue: #269db1;
+$gray: #dadada;
+$white: #fff;
+$text: #6f6f6f;
+$black: #1f1f1f;
+
+body{
+
+    @include primary-font;
+    background-color: $lightgray;
+    font-size: 14px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+@mixin the-shadow{
+    box-shadow: 1px 1px 10px 5px $gray;
+}
+  

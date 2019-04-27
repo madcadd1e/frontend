@@ -1,0 +1,120 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eaeaea;
+  font-size: 14px;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.grid__holder {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.grid__box {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 30px;
+  max-width: 1400px;
+}
+@media (max-width: 1415px) {
+  .grid__box {
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .grid__box {
+    padding: 80px 0px;
+  }
+}
+.grid__item {
+  width: 335px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.grid__item--imageholder {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  overflow: hidden;
+}
+.grid__item--imageholder img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.grid__item--image {
+  width: 100%;
+  position: relative;
+}
+.grid__item--body {
+  background: #fff;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  height: 70px;
+}
+.grid__item--line {
+  color: #dadada;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px 15px;
+  color: #6f6f6f;
+}
+.grid__item--likes {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px 15px;
+  color: #dadada;
+  width: 100px;
+  position: relative;
+}
+.grid__item--likes img {
+  width: 100%;
+  max-width: 15px;
+  margin-right: 5px;
+}
+.grid__item--likes:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  height: 30px;
+  border-left: 1px solid #eaeaea;
+}
+.grid__item--likes:hover {
+  color: #269db1;
+}
+.grid__item--likes:hover img {
+  filter: invert(55%) sepia(14%) saturate(2318%) hue-rotate(141deg) brightness(93%) contrast(82%);
+}
+.grid__item:hover .grid__item--imageholder {
+  box-shadow: 1px 1px 10px 5px #dadada;
+}
+.grid__item:hover .grid__item--imageholder img {
+  transform: scale(1.1);
+}
+.grid__item:hover .grid__item--body {
+  box-shadow: 1px 1px 10px 5px #dadada;
+}
+@media (max-width: 400px) {
+  .grid__item {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
